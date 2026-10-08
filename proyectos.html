@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos | Proyectos</title>
+
+  <!-- Script anti-destello síncrono -->
+  <script src="js/theme-init.js"></script>
+
+  <!-- Hojas de estilo y Script principal -->
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Header Global -->
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">Carlos<span>.dev</span></a>
+      <nav class="cir-tabs" aria-label="Navegación principal">
+        <a href="index.html" class="cir-tabs__t">Inicio</a>
+        <a href="proyectos.html" class="cir-tabs__t active">Proyectos</a>
+        <a href="contacto.html" class="cir-tabs__t">Contacto</a>
+      </nav>
+      <label for="theme-toggle" class="theme" aria-label="Cambiar modo de color">
+        <span class="theme__toggle-wrap">
+          <input id="theme-toggle" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+          <span class="theme__icon">
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+          </span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Galería Principal -->
+  <main class="container">
+
+    <section class="page-header">
+      <h1>Proyectos Seleccionados</h1>
+      <p>Una muestra de herramientas desarrolladas con enfoque en funcionalidad y código limpio.</p>
+      
+      <!-- Botones de Filtro -->
+      <div class="filter-pills">
+        <button type="button" class="pill active" data-filter="all">Todos</button>
+        <button type="button" class="pill" data-filter="web">Web</button>
+        <button type="button" class="pill" data-filter="python">Python</button>
+        <button type="button" class="pill" data-filter="datos">Datos / SQL</button>
+      </div>
+    </section>
+
+    <!-- Grilla de Tarjetas -->
+    <section class="projects-grid">
+
+      <!-- Proyecto 1 -->
+      <article class="project-card" data-category="web">
+        <div class="tools">
+          <div class="circle"><span class="red box"></span></div>
+          <div class="circle"><span class="yellow box"></span></div>
+          <div class="circle"><span class="green box"></span></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-header">
+            <span class="project-badge">Web &amp; Sistema</span>
+            <h2>Sistema de Control &amp; Gestión</h2>
+          </div>
+          <div class="project-case">
+            <p><strong>El Reto:</strong> Registro manual lento y propenso a inconsistencias.</p>
+            <p><strong>La Solución:</strong> Plataforma ligera con persistencia en SQLite e interfaz limpia.</p>
+          </div>
+          <div class="tech-stack">
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+            <span>SQLite</span>
+          </div>
+          <div class="project-links">
+            <button type="button" class="link-btn open-modal" data-id="sistema-gestion">Ver Resumen &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card" data-category="python">
+        <div class="tools">
+          <div class="circle"><span class="red box"></span></div>
+          <div class="circle"><span class="yellow box"></span></div>
+          <div class="circle"><span class="green box"></span></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-header">
+            <span class="project-badge">Python / Automatización</span>
+            <h2>Procesador de Datos Automático</h2>
+          </div>
+          <div class="project-case">
+            <p><strong>El Reto:</strong> Extracción repetitiva desde fuentes dispersas.</p>
+            <p><strong>La Solución:</strong> Script en Python para consolidación automática de reportes.</p>
+          </div>
+          <div class="tech-stack">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Automation</span>
+          </div>
+          <div class="project-links">
+            <button type="button" class="link-btn open-modal" data-id="procesador-datos">Ver Resumen &rarr;</button>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- VENTANA MODAL (Overlay estilo Mac) -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-window">
+      <div class="tools">
+        <div class="circle"><span class="red box modal-close-trigger" title="Cerrar"></span></div>
+        <div class="circle"><span class="yellow box"></span></div>
+        <div class="circle"><span class="green box"></span></div>
+      </div>
+      <div class="modal-body">
+        <span class="project-badge" id="modal-badge">Categoría</span>
+        <h2 id="modal-title">Título del Proyecto</h2>
+
+        <div class="modal-section">
+          <h3>Resumen del Proyecto</h3>
+          <p id="modal-description">Cargando información...</p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Desafío &amp; Solución</h3>
+          <p id="modal-case">Cargando caso...</p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Tecnologías Aplicadas</h3>
+          <div class="tech-stack" id="modal-tech"></div>
+        </div>
+
+        <div class="modal-actions">
+          <a href="#" id="modal-repo-link" target="_blank" rel="noopener" class="submit-btn">Ver Repositorio &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Carlos — Diseñado con simplicidad.</p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

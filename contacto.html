@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos | Contacto</title>
+
+  <!-- Anti-destello síncrono -->
+  <script src="js/theme-init.js"></script>
+
+  <!-- Carga de CSS y JS como módulo -->
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Header Sticky Global -->
+  <header class="main-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">Carlos<span>.dev</span></a>
+      <nav class="cir-tabs" aria-label="Navegación principal">
+        <a href="index.html" class="cir-tabs__t">Inicio</a>
+        <a href="proyectos.html" class="cir-tabs__t">Proyectos</a>
+        <a href="contacto.html" class="cir-tabs__t active">Contacto</a>
+      </nav>
+      <label for="theme-toggle" class="theme" aria-label="Cambiar modo de color">
+        <span class="theme__toggle-wrap">
+          <input id="theme-toggle" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+          <span class="theme__icon">
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+          </span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  <main class="container contact-container">
+
+    <!-- 1. Texto Superior -->
+    <section class="contact-header">
+      <h1>Hablemos.</h1>
+      <p class="contact-intro">
+        ¿Tienes una idea en mente, necesitas automatizar un proceso o buscas apoyo técnico para un proyecto? Escríbeme y evaluemos cómo puedo ayudarte.
+      </p>
+    </section>
+
+    <!-- 2. Formulario con efecto Floating Label -->
+    <form class="contact-form-ui" id="contact-form">
+      <p class="title">Enviar mensaje</p>
+      <p class="message">Completa los campos y te responderé a la brevedad.</p>
+      
+      <label>
+        <input class="input" type="text" id="nombre" placeholder=" " required>
+        <span>Tu nombre</span>
+      </label>
+
+      <label>
+        <input class="input" type="email" id="email" placeholder=" " required>
+        <span>Tu correo electrónico</span>
+      </label>
+
+      <label class="select-label">
+        <select class="input select-input" id="motivo" required>
+          <option value="" disabled selected hidden></option>
+          <option value="web">Desarrollo Web / Sistema</option>
+          <option value="python">Automatización / Python</option>
+          <option value="datos">Análisis de Datos / SQL</option>
+          <option value="soporte">Apoyo Técnico / Mantenimiento</option>
+          <option value="otro">Consulta General</option>
+        </select>
+        <span>Motivo de contacto</span>
+      </label>
+
+      <label>
+        <textarea class="input input--textarea" id="mensaje" rows="4" placeholder=" " required></textarea>
+        <span>¿En qué puedo ayudarte?</span>
+      </label>
+
+      <button type="submit" class="submit-btn">Enviar mensaje &rarr;</button>
+    </form>
+
+    <!-- 3. Correo y Teléfono directo -->
+    <section class="quick-copy-section">
+      <div class="quick-copy-box">
+        <span class="label">Correo directo</span>
+        <div class="copy-row">
+          <input type="text" id="email-value" value="tu-correo@ejemplo.com" readonly>
+          <button class="btn-copy" data-copy="email-value">Copiar</button>
+        </div>
+      </div>
+
+      <div class="quick-copy-box">
+        <span class="label">WhatsApp / Teléfono</span>
+        <div class="copy-row">
+          <input type="text" id="phone-value" value="+56 9 1234 5678" readonly>
+          <button class="btn-copy" data-copy="phone-value">Copiar</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Carlos — Diseñado con simplicidad.</p>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

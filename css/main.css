@@ -1,0 +1,28 @@
+/* ==========================================================================
+   PUNTO DE ENTRADA CENTRAL (css/main.css)
+   ========================================================================== */
+
+/* 1. Base y Tokens */
+@import url('./base/variables.css');
+@import url('./base/global.css');
+
+/* 2. Layout Estructural (Header & Footer) */
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+
+/* 3. Páginas Específicas */
+@import url('./pages/home.css');
+@import url('./pages/proyectos.css');
+@import url('./pages/contacto.css');
+
+/* 4. Clases Utilitarias Globales */
+.project-card.is-hidden {
+  display: none !important;
+}
+
+/* Transición fluida para el cambio de tema */
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}

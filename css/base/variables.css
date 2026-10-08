@@ -1,0 +1,45 @@
+/* ==========================================================================
+   DESIGN TOKENS & MODO OSCURO (Verde Sage)
+   ========================================================================== */
+
+:root,
+html {
+  /* Modo Claro */
+  --bg-primary: #f8faf9;
+  --bg-surface: #ffffff;
+  --bg-card: #f0f4f2;
+  --text-primary: #1f2923;
+  --text-secondary: #526359;
+  
+  --accent-color: #3b7a57;
+  --accent-hover: #2d5e43;
+  --accent-light: #e2ece6;
+  --border-color: #e0e8e3;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --transition-fast: 0.2s ease;
+}
+
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  /* Modo Oscuro */
+  --bg-primary: #121614;
+  --bg-surface: #1a211d;
+  --bg-card: #222b26;
+  --text-primary: #e8eee9;
+  --text-secondary: #a3b3a9;
+  
+  --accent-color: #5bb383;
+  --accent-hover: #72c497;
+  --accent-light: #21352a;
+  --border-color: #2c3831;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
