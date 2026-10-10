@@ -195,3 +195,24 @@
   color: var(--text-secondary);
   line-height: 1.5;
 }
+
+/* ========================================================================== */
+/* ESTILOS RESPONSIVOS PARA MÓVILES (Pantallas pequeñas)                      */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  /* Forzamos a que los cuadros informativos o de la cuadrícula pasen a una sola columna */
+  .home-container, 
+  .bento-grid { /* Ajusta esta clase al nombre real de tu contenedor principal en el index */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* Aseguramos que las tarjetas ocupen todo el ancho disponible */
+  .bento-card, 
+  .info-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
