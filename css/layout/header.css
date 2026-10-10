@@ -194,3 +194,21 @@ html[data-theme="dark"] .main-header {
 .theme__toggle:checked ~ .theme__icon .theme__icon-part ~ .theme__icon-part {
   opacity: 0;
 }
+
+/* ========================================================================== */
+/* RESPONSIVE PARA HEADER EN MÓVILES                                           */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap; /* Permite que los elementos bajen a otra línea si no caben */
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Opcional: ajusta un poco el tamaño o el orden si deseas que el menú baje ordenadamente */
+  .cir-tabs {
+    order: 2; /* Pone las pestañas abajo del logo/switch si es necesario */
+    width: 100%;
+    justify-content: center;
+  }
+}
