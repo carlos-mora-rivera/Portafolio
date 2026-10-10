@@ -196,3 +196,29 @@
   line-height: 1.5;
 }
 
+/* ========================================================================== */
+/* RESPONSIVO BENTO GRID PARA MÓVILES                                         */
+/* ========================================================================== */
+@media (max-width: 768px) {
+  /* Forzamos a que cualquier contenedor de cuadrícula use una sola columna */
+  .bento-grid, 
+  .home-grid, 
+  [class*="grid"] {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+    width: 100% !important;
+    gap: 1rem !important;
+    padding: 0 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Aseguramos que todas las tarjetas ocupen el ancho completo sin desbordarse */
+  .bento-card, 
+  .info-card, 
+  [class*="card"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
