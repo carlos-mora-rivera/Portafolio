@@ -196,26 +196,3 @@
   line-height: 1.5;
 }
 
-/* ========================================================================== */
-/* DISEÑO RESPONSIVO PARA MÓVILES                                             */
-/* ========================================================================== */
-@media (max-width: 768px) {
-  /* Asegura que el contenedor principal o grid use una sola columna en móviles */
-  .home-container, 
-  .bento-grid {
-    display: grid;
-    grid-template-columns: 1fr !important; /* Una sola columna que abarque todo el ancho */
-    gap: 1.5rem;
-    padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* Las tarjetas deben ocupar el 100% y adaptarse sin desbordarse */
-  .bento-card, 
-  .info-card {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-}
